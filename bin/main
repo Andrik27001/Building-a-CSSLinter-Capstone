@@ -1,3 +1,6 @@
 #!/usr/bin/env ruby
 
-puts 'Hellasdao!'
+require_relative '../lib/linter'
+
+test = CSSLinter.new('style.css')
+test.white_spaces_check
