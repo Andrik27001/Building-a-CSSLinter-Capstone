@@ -4,3 +4,5 @@ require_relative '../lib/linter'
 
 test = CSSLinter.new('style.css')
 test.white_spaces_check
+test.empty_lines_check
+test.open_close_block_check
