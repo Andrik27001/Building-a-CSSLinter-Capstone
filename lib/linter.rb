@@ -29,4 +29,12 @@ class CSSLinter
       end
     end
   end
+
+  def newline_after_colon_check
+    @file_lines.each_with_index do |line, index|
+      if line.include?('{') && line.include?(',')
+        @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingNewline:   Expected newline after \",\".\n "
+      end
+    end
+  end
 end
