@@ -5,14 +5,24 @@
 
 ## Description
 
-This is a project from the Microverse course designed to fully understand enumerable methods in Ruby. To achieve this task, this project consists of rebuilding some of these methods on our own, not only to understand them but to prove that there's no magic to it. Hope you enjoy it.
+In the world of programming, while coding and gaining experience, one realizes how important is the correct writing of a code and not just the function of the code itself, due to the possible confusion and the multiple errors that bad writing can generate, to avoid this, there are tools called "Linters" that detect these errors. In this Microverse course project I have created my own Linter for CSS Files, check it out!
+
+
+## How to use it
+
+- Download or clone this repository
+- Open it into your text editor
+- Add your file to the root directory and rename it "style.css"
+- Open your ruby terminal and run "Bundle install" to install the gem "Colorize" and avoid errors
+- Finally, run "bin/main" and check for possible errors!
+
 
 ## This custom CSSLinter checks for the following errors:
 
-### White Spaces Check
+### White Spaces Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -21,7 +31,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button,
 div  {
@@ -31,10 +41,10 @@ div  {
 } |
 ```
 
-### Blank Lines Check
+### Blank Lines Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -43,7 +53,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button,
 div {
@@ -55,10 +65,10 @@ div {
 }
 ```
 
-### Missing Semicolon Check
+### Missing Semicolon Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -67,7 +77,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button,
 div {
@@ -77,10 +87,10 @@ div {
 }
 ```
 
-### Missing Newline(multiple selectors) Check
+### Missing Newline(multiple selectors) Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -89,7 +99,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button, div {
   color: red;
@@ -98,10 +108,10 @@ button, div {
 }
 ```
 
-### Correct Indentation Check
+### Indentation Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -110,7 +120,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button,
   div {
@@ -120,10 +130,10 @@ font-size: 2rem;
 }
 ```
 
-### Missing Close/Open Bracket
+### Missing Close/Open Error
 
 ```css
-/* Good Coding
+/* Good Coding */
 
 button,
 div {
@@ -132,7 +142,7 @@ div {
   font-size: 2rem;
 }
 
-/* Bad Coding
+/* Bad Coding */
 
 button,
 div {}
