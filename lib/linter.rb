@@ -57,4 +57,9 @@ class CSSLinter
     @errors << " #{@line}/  ||  Lint/Syntax:   Expected closing bracket.\n " if @close > @open
     @errors << " #{@file}/  ||  Lint/Syntax:   Unclosed block.\n " if @open > @close
   end
+
+  def total_errors
+    puts @errors, ''
+    puts " Linter has found a total of #{@errors.size} errors."
+  end
 end
