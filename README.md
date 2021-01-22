@@ -5,7 +5,7 @@
 
 ## Description
 
-In the world of programming, while coding and gaining experience, one realizes how important is the correct writing of a code and not just the function of the code itself, due to the possible confusion and the multiple errors that bad writing can generate, to avoid this, there are tools called "Linters" that detect these errors. In this Microverse course project I have created my own Linter for CSS Files, check it out!
+In the world of programming, while coding and gaining experience, one realizes how important is the correct writing of a code and not only the function of the code itself due to the possible confusions and errors that bad writing can generate, to avoid this, there are tools called "Linters" that detect these errors. In this Microverse course project I have created my own Linter for CSS Files, check it out!
 
 
 ## How to use it
