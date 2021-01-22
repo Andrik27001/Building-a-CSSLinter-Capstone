@@ -37,4 +37,13 @@ class CSSLinter
       end
     end
   end
+
+  def indentation_check
+    @file_lines.each_with_index do |line, index|
+      strip_line = line.strip.split(' ')
+      unless @symbols.include?(strip_line.first) || strip_line.include?('{') || strip_line.empty? || line.include?('  ')
+        @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingIndentation:   Expected indentation of 2 spaces.\n "
+      end
+    end
+  end
 end
