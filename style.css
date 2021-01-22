@@ -1,4 +1,9 @@
-button, a { 
+button:active {
 
-  color: blue
+color: red;
+} 
+
+h1, h2 {
+  font-size: 2rem
+{
 }
