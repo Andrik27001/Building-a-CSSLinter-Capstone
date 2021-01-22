@@ -11,8 +11,8 @@ This is a project from the Microverse course designed to fully understand enumer
 
 ### White Spaces Check
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -21,7 +21,7 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button,
 div  {
@@ -29,12 +29,12 @@ div  {
   padding: 1rem ;
   font-size: 2rem;
 } |
-~~~
+```
 
 ### Blank Lines Check
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -43,7 +43,7 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button,
 div {
@@ -53,12 +53,12 @@ div {
   font-size: 2rem;
 
 }
-~~~
+```
 
 ### Missing Semicolon Check
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -67,7 +67,7 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button,
 div {
@@ -75,12 +75,12 @@ div {
   padding: 1rem;
   font-size: 2rem  // <--
 }
-~~~
+```
 
 ### Missing Newline(multiple selectors) Check
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -89,19 +89,19 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button, div {
   color: red;
   padding: 1rem;
   font-size: 2rem;
 }
-~~~
+```
 
 ### Correct Indentation Check
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -110,7 +110,7 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button,
   div {
@@ -118,12 +118,12 @@ color: red;
 padding: 1rem;
 font-size: 2rem;
 }
-~~~
+```
 
 ### Missing Close/Open Bracket
 
-~~~css
-// Good Coding
+```css
+/* Good Coding
 
 button,
 div {
@@ -132,7 +132,7 @@ div {
   font-size: 2rem;
 }
 
-// Bad Coding
+/* Bad Coding
 
 button,
 div {}
@@ -140,7 +140,7 @@ div {}
   padding: 1rem;
   font-size: 2rem;
 }
-~~~
+```
 
 
 ## Built With
