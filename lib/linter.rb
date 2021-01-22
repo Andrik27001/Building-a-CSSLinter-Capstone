@@ -46,4 +46,15 @@ class CSSLinter
       end
     end
   end
+
+  def open_close_block_check
+    @open = 0
+    @close = 0
+    @file_lines.each do |line|
+      @open += 1 if line.include? '{'
+      @close += 1 if line.include? '}'
+    end
+    @errors << " #{@line}/  ||  Lint/Syntax:   Expected closing bracket.\n " if @close > @open
+    @errors << " #{@file}/  ||  Lint/Syntax:   Unclosed block.\n " if @open > @close
+  end
 end
