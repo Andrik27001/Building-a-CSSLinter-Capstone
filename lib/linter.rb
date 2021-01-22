@@ -13,4 +13,12 @@ class CSSLinter
       end
     end
   end
+
+  def empty_lines_check
+    @file_lines.each_with_index do |_line, index|
+      if @file_lines[index].strip.empty? && !@file_lines[index - 1].include?('}')
+        @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingEmptyLines:   Trailing blank line detected.\n "
+      end
+    end
+  end
 end
