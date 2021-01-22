@@ -1,8 +1,10 @@
+require 'colorize'
+
 class CSSLinter
   def initialize(file)
     @file = file
     @file_lines = File.readlines(@file)
-    @symbols = %w[{ }]
+    @symbols = %w[{ } ,]
     @errors = []
   end
 
@@ -24,7 +26,7 @@ class CSSLinter
 
   def semicolon_check
     @file_lines.each_with_index do |line, index|
-      if line.include?(':') && line.include?('  ')
+      unless line.include?('{') || line.include?('}') || line.include?(';') || line.strip.empty? || line.include?(',')
         @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingMissingSemicolon:   Expected a semicolon.\n "
       end
     end
@@ -40,8 +42,7 @@ class CSSLinter
 
   def indentation_check
     @file_lines.each_with_index do |line, index|
-      strip_line = line.strip.split(' ')
-      unless @symbols.include?(strip_line.first) || strip_line.include?('{') || strip_line.empty? || line.include?('  ')
+      unless line.include?('{') || line.include?('}') || line.include?('  ') || line.strip.empty? || line.include?(',')
         @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingIndentation:   Expected indentation of 2 spaces.\n "
       end
     end
@@ -59,7 +60,14 @@ class CSSLinter
   end
 
   def total_errors
-    puts @errors, ''
-    puts " Linter has found a total of #{@errors.size} errors."
+    @offense = 0
+    @offense = @errors.size == 1 ? 'offense' : 'offenses'
+    if @errors.empty?
+      puts
+      puts " 1 file inspected, #{@errors.size} #{@offense} detected.".colorize(:green)
+    else
+      puts @errors
+      puts " 1 file inspected, #{@errors.size} #{@offense} detected.".colorize(:red)
+    end
   end
 end
