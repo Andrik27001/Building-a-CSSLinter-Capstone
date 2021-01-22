@@ -21,4 +21,12 @@ class CSSLinter
       end
     end
   end
+
+  def semicolon_check
+    @file_lines.each_with_index do |line, index|
+      if line.include?(':') && line.include?('  ')
+        @errors << " #{@file}/Row #{index + 1}  ||  Layout/TrailingMissingSemicolon:   Expected a semicolon.\n "
+      end
+    end
+  end
 end
