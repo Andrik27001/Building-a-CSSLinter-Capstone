@@ -1,16 +1,12 @@
 require 'colorize'
 
 class CSSLinter
-  private
-
   def initialize(file)
     @file = file
     @file_lines = File.readlines(@file)
     @symbols = %w[{ } ,]
     @errors = []
   end
-
-  public
 
   def white_spaces_check
     @file_lines.each_with_index do |line, index|
