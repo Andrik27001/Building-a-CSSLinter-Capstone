@@ -32,4 +32,10 @@ describe CSSLinter do
       expect(linter_instance.indentation_check).to eql(linter_instance.errors)
     end
   end
+
+  describe '#open_close_block_check' do
+    it 'Returns Missing bracket error' do
+      expect(linter_instance.open_close_block_check).to eql(linter_instance.errors)
+    end
+  end
 end
