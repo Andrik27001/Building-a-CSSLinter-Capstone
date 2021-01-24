@@ -14,7 +14,7 @@ In the world of programming, while coding and gaining experience, one realizes h
 - Open it into your text editor
 - Add your file to the root directory and rename it "style.css"
 - Open your ruby terminal and run "Bundle install" to install the gem "Colorize" and avoid errors
-- Finally, run "bin/main" and check for possible errors!
+- Finally, run "ruby bin/main" and check for possible errors!
 
 
 ## This custom CSSLinter checks for the following errors:
