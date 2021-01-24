@@ -8,7 +8,7 @@ describe CSSLinter do
       expect(linter_instance.white_spaces_check).to eql(linter_instance.errors)
     end
   end
-  
+
   describe '#empty_lines_check' do
     it 'Returns Trailing blank line detected' do
       expect(linter_instance.empty_lines_check).to eql(linter_instance.errors)

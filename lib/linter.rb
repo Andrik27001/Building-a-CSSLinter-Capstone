@@ -1,7 +1,6 @@
 require 'colorize'
 
 class CSSLinter
-
   attr_reader :errors
 
   private
