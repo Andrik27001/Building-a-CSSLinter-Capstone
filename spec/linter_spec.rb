@@ -40,7 +40,7 @@ describe CSSLinter do
 
   describe '#open_close_block_check' do
     it 'Returns Missing bracket error' do
-      expect(linter_instance.open_close_block_check).to eql(" style.css  ||  Lint/Syntax:   Unclosed block.\n ")
+      expect(linter_instance.open_close_block_check).to eql(" style.css  ||  Lint/Syntax:   Unexpected token '}'.\n ")
     end
   end
 end

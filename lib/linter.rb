@@ -70,7 +70,7 @@ class CSSLinter
       @close += 1 if line.include? '}'
     end
     if @close > @open
-      @error = " #{@line}  ||  Lint/Syntax:   Expected closing bracket.\n "
+      @error = " #{@file}  ||  Lint/Syntax:   Unexpected token '}'.\n "
       @errors << @error
     elsif @open > @close
       @error = " #{@file}  ||  Lint/Syntax:   Unclosed block.\n "
