@@ -26,4 +26,10 @@ describe CSSLinter do
       expect(linter_instance.newline_after_colon_check).to eql(linter_instance.errors)
     end
   end
+
+  describe '#indentation_check' do
+    it 'Returns Expected indentation of 2 spaces' do
+      expect(linter_instance.indentation_check).to eql(linter_instance.errors)
+    end
+  end
 end
