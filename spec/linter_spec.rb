@@ -20,4 +20,10 @@ describe CSSLinter do
       expect(linter_instance.semicolon_check).to eql(linter_instance.errors)
     end
   end
+
+  describe '#newline_after_colon_check' do
+    it 'Returns Expected a newline after ,' do
+      expect(linter_instance.newline_after_colon_check).to eql(linter_instance.errors)
+    end
+  end
 end
