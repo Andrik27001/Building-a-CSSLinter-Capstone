@@ -61,12 +61,12 @@ class CSSLinter
     @open = 0
     @close = 0
     @file_lines.each do |line|
-      line.split(' ').each do |value|
+      line.split('').each do |value|
         @open += 1 if value.include?('{')
         @close += 1 if value.include?('}')
       end
     end
-    if @close > @open
+    if @close > @open || empty_brackets?
       @error = " #{@file}  ||  Lint/Syntax:   Unexpected token '}'.\n "
       @errors << @error
     elsif @open > @close
@@ -74,6 +74,14 @@ class CSSLinter
       @errors << @error
     end
     @error
+  end
+
+  def empty_brackets?
+    check = false
+    @file_lines.each do |line|
+      check = true if line.include?('}') && line.strip != '}'
+    end
+    check
   end
 
   def total_errors

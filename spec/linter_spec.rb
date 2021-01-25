@@ -4,7 +4,7 @@ describe CSSLinter do
   linter_instance = CSSLinter.new('style.css')
 
   describe '#white_spaces_check' do
-    message = " style.css/Row 9  ||  Layout/TrailingWhitespace:   Trailing whitespace detected.\n "
+    message = " style.css/Row 8  ||  Layout/TrailingWhitespace:   Trailing whitespace detected.\n "
     it 'Returns Trailing whitespace detected ' do
       expect(linter_instance.white_spaces_check).to eql(message)
     end
@@ -25,7 +25,7 @@ describe CSSLinter do
   end
 
   describe '#newline_after_colon_check' do
-    message = " style.css/Row 7  ||  Layout/TrailingNewline:   Expected a newline after \",\".\n "
+    message = " style.css/Row 6  ||  Layout/TrailingNewline:   Expected a newline after \",\".\n "
     it 'Returns Expected a newline after ,' do
       expect(linter_instance.newline_after_colon_check).to eql(message)
     end
@@ -40,7 +40,7 @@ describe CSSLinter do
 
   describe '#open_close_block_check' do
     it 'Returns Missing bracket error' do
-      expect(linter_instance.open_close_block_check).to eql(" style.css  ||  Lint/Syntax:   Unexpected token '}'.\n ")
+      expect(linter_instance.open_close_block_check).to eql(" style.css  ||  Lint/Syntax:   Unclosed block.\n ")
     end
   end
 end
