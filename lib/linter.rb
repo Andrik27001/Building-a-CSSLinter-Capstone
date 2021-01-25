@@ -62,8 +62,10 @@ class CSSLinter
     @open = 0
     @close = 0
     @file_lines.each do |line|
-      @open += 1 if line.include? '{'
-      @close += 1 if line.include? '}'
+      line.split(' ').each do |value|
+        @open += 1 if value.include?('{')
+        @close += 1 if value.include?('}')
+      end
     end
     if @close > @open
       @error = " #{@file}  ||  Lint/Syntax:   Unexpected token '}'.\n "
