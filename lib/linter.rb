@@ -4,7 +4,6 @@ class CSSLinter
   def initialize(file)
     @file = file
     @file_lines = File.readlines(@file)
-    @symbols = %w[{ } ,]
     @errors = []
   end
 
