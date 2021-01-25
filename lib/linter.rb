@@ -67,7 +67,7 @@ class CSSLinter
       end
     end
     if @close > @open || empty_brackets?
-      @error = " #{@file}  ||  Lint/Syntax:   Unexpected token '}'.\n "
+      @error = " #{@file}  ||  Lint/Syntax:   Unexpected token '{' or '}'.\n "
       @errors << @error
     elsif @open > @close
       @error = " #{@file}  ||  Lint/Syntax:   Unclosed block.\n "
